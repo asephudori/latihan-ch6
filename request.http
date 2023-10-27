@@ -1,0 +1,47 @@
+POST http://localhost:3000/api/v1/register
+Content-Type: application/json
+
+{
+  "email": "sabrina@mail.com",
+  "password": "sabrina123",
+  "password_confirmation": "sabrina123",
+  "profile": {
+    "first_name": "Sab",
+    "last_name": "rina",
+    "birth_date": 19921109,
+    "profile_picture": "http:image.jpg"
+  }
+}
+
+###
+POST http://localhost:3000/api/v1/login
+Content-Type: application/json
+
+{
+    "email":"sabrina@mail.com",
+    "password":"sabrina123"
+}
+
+###
+GET http://localhost:3000/api/v1/whoami
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjk4Mzc4Nzk1fQ.A3arj4aElJDgajonImGPFDrgnQGx63hdvD7m45hFUsU
+
+###
+POST http://localhost:3000/api/v1/profile/update/1
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjk4Mzc4Nzk1fQ.A3arj4aElJDgajonImGPFDrgnQGx63hdvD7m45hFUsU
+
+{
+  "email": "sabrina@mail.com",
+  "password": "sabrina123",
+  "profile": {
+    "first_name": "Sab",
+    "last_name": "rina",
+    "birth_date": 19921109,
+    "profile_picture": "image.jpeg"
+  }
+}
+
+###
+GET http://localhost:3000/api/v1/authenticate-user
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjk4Mzc4Nzk1fQ.A3arj4aElJDgajonImGPFDrgnQGx63hdvD7m45hFUsU
